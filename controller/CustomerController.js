@@ -4,14 +4,14 @@ function generateCustomerId() {
         let lastCustomerId = customerTable[customerTable.length-1].getCid();
         let newCustomerId = parseInt(lastCustomerId.substring(1,4))+1;
         if (newCustomerId < 10) {
-            $("#customer-id").text("C-00"+newCustomerId);
+            $("#customer-id").text("#C-00"+newCustomerId);
         }else if (newCustomerId < 100) {
-            $("#customer-id").text("C-0"+newCustomerId);
+            $("#customer-id").text("#C-0"+newCustomerId);
         } else {
-            $("#customer-id").text("C-"+newCustomerId);
+            $("#customer-id").text("#C-"+newCustomerId);
         }
     } catch (e) {
-        $("#customer-id").text("C-001");
+        $("#customer-id").text("#C-001");
     }
 
 }

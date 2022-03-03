@@ -4,14 +4,14 @@ function generateItemCode() {
         let lastItemCode = itemTable[itemTable.length-1].getCode();
         let newItemCode = parseInt(lastItemCode.substring(1,4))+1;
         if (newItemCode < 10) {
-            $("#item-code").text("I-00"+newItemCode);
+            $("#item-code").text("#I-00"+newItemCode);
         }else if (newItemCode < 100) {
-            $("#item-code").text("I-0"+newItemCode);
+            $("#item-code").text("#I-0"+newItemCode);
         } else {
-            $("#item-code").text("I-"+newItemCode);
+            $("#item-code").text("#I-"+newItemCode);
         }
     } catch (e) {
-        $("#item-code").text("I-001");
+        $("#item-code").text("#I-001");
     }
 
 }

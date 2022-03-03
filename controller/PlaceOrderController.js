@@ -4,14 +4,14 @@ function generateOrderID() {
         let lastOrderId = orderTable[orderTable.length-1].getOid();
         let newOrderId = parseInt(lastOrderId.substring(1,4))+1;
         if (newOrderId < 10) {
-            $("#order-id").text("O-00"+newOrderId);
+            $("#order-id").text("#O-00"+newOrderId);
         }else if (newOrderId < 100) {
-            $("#order-id").text("O-0"+newOrderId);
+            $("#order-id").text("#O-0"+newOrderId);
         } else {
-            $("#order-id").text("O-"+newOrderId);
+            $("#order-id").text("#O-"+newOrderId);
         }
     } catch (e) {
-        $("#order-id").text("O-001");
+        $("#order-id").text("#O-001");
     }
 
 }
